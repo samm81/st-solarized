@@ -80,6 +80,9 @@ install: all
 	@chmod 644 ${DESTDIR}${MANPREFIX}/man1/st.1
 	@echo Please see the README file regarding the terminfo entry of st.
 	@tic -s st.info
+	@echo Installing fonts to ${FONTDIR}
+	@cp fonts/* ${FONTDIR}/
+	@fc-cache -f
 
 uninstall:
 	@echo removing executable files from ${DESTDIR}${PREFIX}/bin
