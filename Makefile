@@ -6,6 +6,7 @@ include config.mk
 SRC = st.c
 CONF1 = config-solarized-dark.h
 CONF2 = config-solarized-light.h
+CONFS = ${CONF1} ${CONF2}
 OBJ1 = st-solarized-dark.o
 OBJ2 = st-solarized-light.o
 OBJS = ${OBJ1} ${OBJ2}
@@ -56,7 +57,7 @@ ${BIN2}: ${OBJ2}
 
 clean:
 	@echo cleaning
-	@rm -f ${BINS} ${OBJS} st-${VERSION}.tar.gz
+	@rm -f ${CONFS} ${BINS} ${OBJS} st-${VERSION}.tar.gz
 
 #dist: clean
 #	@echo creating dist tarball

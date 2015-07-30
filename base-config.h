@@ -5,9 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Inconsolata:pixelsize=17:antialias=false:autohint=false";
+static char font[] = "Inconsolata:pixelsize=20:antialias=true:autohint=false";
 static int borderpx = 2;
-static char shell[] = "/bin/sh";
+static char shell[] = "/bin/zsh";
 static char *utmp = NULL;
 
 /* identification sequence returned in DA and DECID */
@@ -45,12 +45,12 @@ static unsigned int blinktimeout = 800;
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
  * it
  */
-static int bellvolume = 0;
+static int bellvolume = 50;
 
 /* TERM value */
 static char termname[] = "st-256color";
 
-static unsigned int tabspaces = 8;
+static unsigned int tabspaces = 4;
 
 
 /* Terminal colors (16 first used in escape sequence) */
