@@ -7,7 +7,7 @@
  */
 static char font[] = "Inconsolata:pixelsize=22:antialias=true:autohint=false";
 static int borderpx = 2;
-static char shell[] = "/bin/zsh";
+static char shell[] = "/bin/bash";
 static char *utmp = NULL;
 
 /* identification sequence returned in DA and DECID */
