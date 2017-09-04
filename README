@@ -6,6 +6,12 @@ st is a simple terminal emulator for X which sucks less.
 Requirements
 ------------
 In order to build st you need the Xlib header files.
+In my last installation (lubuntu 17.04), these were:
+```
+libx11-dev
+libxft-dev
+libxext-dev
+```
 
 
 Installation

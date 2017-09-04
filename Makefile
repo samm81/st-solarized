@@ -75,6 +75,7 @@ install: all
 	@cp -f ${BIN2} ${DESTDIR}${PREFIX}/bin/
 	@chmod 755 ${DESTDIR}${PREFIX}/bin/${BIN2}
 	@cp st.sh ${DESTDIR}${PREFIX}/bin/st
+	@chmod +x ${DESTDIR}${PREFIX}/bin/st
 	@echo installing manual page to ${DESTDIR}${MANPREFIX}/man1
 	@mkdir -p ${DESTDIR}${MANPREFIX}/man1
 	@sed "s/VERSION/${VERSION}/g" < st.1 > ${DESTDIR}${MANPREFIX}/man1/st.1
@@ -82,7 +83,9 @@ install: all
 	@echo Please see the README file regarding the terminfo entry of st.
 	@tic -s st.info
 	@echo Installing fonts to ${FONTDIR}
+	@mkdir -p ${FONTDIR}
 	@cp fonts/* ${FONTDIR}/
+	@echo Running fc-cache -f to update fonts, this may take a bit...
 	@fc-cache -f
 
 uninstall:
